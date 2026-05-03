@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Student Toolkit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <header>
+    <h1>AI Student Toolkit</h1>
+    <p>Boost your productivity with AI-powered study tools.</p>
+  </header>
+
+  <section class="card">
+    <h2>Daily Goals</h2>
+    <input type="text" id="goalInput" placeholder="Enter today's goal">
+    <button onclick="addGoal()">Add Goal</button>
+    <ul id="goalList"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Pomodoro Timer</h2>
+    <p id="timer">25:00</p>
+    <button onclick="startTimer()">Start</button>
+  </section>
+
+  <section class="card">
+    <h2>AI Prompt Ideas</h2>
+    <ul>
+      <li>Summarize my notes</li>
+      <li>Create revision questions</li>
+      <li>Explain this topic simply</li>
+      <li>Generate study timetable</li>
+    </ul>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
