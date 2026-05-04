@@ -1,41 +1,123 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  color: #111827;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 header {
   background: #111827;
   color: white;
-  padding: 30px;
   text-align: center;
+  padding: 40px 20px;
 }
 
-.card {
+header h1 {
+  margin: 0;
+  font-size: 42px;
+}
+
+header p {
+  margin-top: 10px;
+  color: #d1d5db;
+}
+
+#darkModeBtn {
+  margin-top: 20px;
   background: white;
-  margin: 20px;
+  color: #111827;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-section {
+  text-align: center;
+  margin: 30px;
+}
+
+#searchInput {
+  width: 80%;
+  max-width: 500px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.prompt-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.category-title {
+  grid-column: 1 / -1;
+  margin: 10px 0;
+  color: #374151;
+  font-size: 24px;
+}
+
+.prompt-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.prompt-card:hover {
+  transform: translateY(-5px);
+}
+
+.prompt-card h2 {
+  margin-top: 0;
 }
 
 button {
-  padding: 10px 15px;
-  border: none;
   background: #111827;
   color: white;
+  border: none;
+  padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-input {
-  padding: 10px;
-  width: 70%;
-  margin-bottom: 10px;
+button:hover {
+  opacity: 0.9;
 }
 
-#timer {
-  font-size: 32px;
-  font-weight: bold;
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #6b7280;
+}
+
+.dark-mode {
+  background: #111827;
+  color: white;
+}
+
+.dark-mode .prompt-card {
+  background: #1f2937;
+  color: white;
+}
+
+.dark-mode #searchInput {
+  background: #374151;
+  color: white;
+  border: none;
+}
+
+.dark-mode .category-title {
+  color: #f3f4f6;
+}
+
+.dark-mode footer {
+  color: #d1d5db;
 }
