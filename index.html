@@ -3,39 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Student Toolkit</title>
+  <title>PromptVault AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>AI Student Toolkit</h1>
-    <p>Boost your productivity with AI-powered study tools.</p>
-  </header>
+<header>
+  <h1>PromptVault AI</h1>
+  <p>Organize and explore useful AI prompts.</p>
 
-  <section class="card">
-    <h2>Daily Goals</h2>
-    <input type="text" id="goalInput" placeholder="Enter today's goal">
-    <button onclick="addGoal()">Add Goal</button>
-    <ul id="goalList"></ul>
-  </section>
+  <button id="darkModeBtn">Toggle Dark Mode</button>
+</header>
 
-  <section class="card">
-    <h2>Pomodoro Timer</h2>
-    <p id="timer">25:00</p>
-    <button onclick="startTimer()">Start</button>
-  </section>
+<section class="search-section">
+  <input type="text" id="searchInput" placeholder="Search prompts...">
+</section>
 
-  <section class="card">
-    <h2>AI Prompt Ideas</h2>
-    <ul>
-      <li>Summarize my notes</li>
-      <li>Create revision questions</li>
-      <li>Explain this topic simply</li>
-      <li>Generate study timetable</li>
-    </ul>
-  </section>
+<section class="prompt-container" id="promptContainer">
+
+  <h2 class="category-title">Study Prompts</h2>
+
+  <div class="prompt-card">
+    <h2>Study Assistant</h2>
+    <p>Explain this topic in simple words with examples.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <div class="prompt-card">
+    <h2>Revision Planner</h2>
+    <p>Create a 7-day revision strategy for board exams.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <h2 class="category-title">Business Prompts</h2>
+
+  <div class="prompt-card">
+    <h2>Startup Ideas</h2>
+    <p>Generate 5 beginner-friendly AI startup ideas.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <div class="prompt-card">
+    <h2>Marketing Ideas</h2>
+    <p>Generate creative social media campaign ideas for students.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <h2 class="category-title">Writing Prompts</h2>
+
+  <div class="prompt-card">
+    <h2>Essay Writing</h2>
+    <p>Write an engaging introduction for a consistency-themed essay.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <div class="prompt-card">
+    <h2>Storytelling</h2>
+    <p>Create a motivational story about discipline and growth.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <h2 class="category-title">Coding Prompts</h2>
+
+  <div class="prompt-card">
+    <h2>JavaScript Helper</h2>
+    <p>Explain this JavaScript code step-by-step.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+  <div class="prompt-card">
+    <h2>Bug Fixing</h2>
+    <p>Find and fix errors in this HTML and CSS code.</p>
+    <button onclick="copyPrompt(this)">Copy Prompt</button>
+  </div>
+
+</section>
+
+<footer>
+  <p>Built with HTML, CSS & JavaScript • Open Source Project</p>
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
