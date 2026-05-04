@@ -1,38 +1,34 @@
-function addGoal() {
-  const input = document.getElementById('goalInput');
-  const list = document.getElementById('goalList');
+function copyPrompt(button) {
+  const promptText = button.previousElementSibling.textContent;
 
-  if(input.value.trim() !== '') {
-    const li = document.createElement('li');
-    li.textContent = input.value;
-    list.appendChild(li);
-    input.value = '';
-  }
+  navigator.clipboard.writeText(promptText);
+
+  button.textContent = "Copied!";
+
+  setTimeout(() => {
+    button.textContent = "Copy Prompt";
+  }, 1500);
 }
 
-let time = 1500;
-let running = false;
+const searchInput = document.getElementById('searchInput');
 
-function startTimer() {
-  if(running) return;
+searchInput.addEventListener('keyup', function () {
+  const filter = searchInput.value.toLowerCase();
+  const cards = document.querySelectorAll('.prompt-card');
 
-  running = true;
+  cards.forEach(card => {
+    const text = card.textContent.toLowerCase();
 
-  const timerDisplay = document.getElementById('timer');
-
-  const interval = setInterval(() => {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-
-    timerDisplay.textContent =
-      `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-
-    time--;
-
-    if(time < 0) {
-      clearInterval(interval);
-      timerDisplay.textContent = 'Done!';
-      running = false;
+    if (text.includes(filter)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
     }
-  }, 1000);
-}
+  });
+});
+
+const darkModeBtn = document.getElementById('darkModeBtn');
+
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
